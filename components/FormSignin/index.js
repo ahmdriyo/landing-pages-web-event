@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../Button';
 import TextInput from '../TextInput';
 import { useRouter } from 'next/router';
-import { postData } from '../../utils/fetchData';
+import { postData,getData } from '../../utils/fetchData';
 import Cookies from 'js-cookie';
 import { toast } from 'react-toastify';
 
@@ -19,7 +19,8 @@ export default function FormSignin() {
 
   const handleSubmit = async () => {
     const res = await postData('/api/v1/auth/signin', form);
-
+    // alert(JSON.stringify(res));
+    // console.log('User Data:', userDataRes.data);
     toast.success('berhasil signin', {
       position: 'top-right',
       autoClose: 5000,
@@ -32,7 +33,6 @@ export default function FormSignin() {
     Cookies.set('token', res.data.token);
     router.push('/');
   };
-
   return (
     <form className='form-login d-flex flex-column mt-4 mt-md-0 p-30'>
       <TextInput
