@@ -26,7 +26,7 @@ export default function Navbar({}) {
       <div className='container-fluid'>
         <Link href={'/'}>
           <a className='navbar-brand'>
-            <img src='/images/logo.svg' alt='semina' />
+            Iyooo
           </a>
         </Link>
         <button
@@ -69,7 +69,7 @@ export default function Navbar({}) {
                       data-bs-toggle='dropdown'
                       aria-expanded='false'
                     >
-                      <img src='/images/avatar.png' alt='semina' width='60' />
+                      <img src='/images/avatar.png' alt='semina' width='60' style={{borderRadius:50}}/>
                     </a>
 
                     <a
